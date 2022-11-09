@@ -16,7 +16,6 @@ function keyTyped() {
     // }
   }
 }
-
 function draw() {
   strokeWeight(x); //adjust the strokeweight by pressing right bracket
   if (mouseIsPressed) {
