@@ -1,23 +1,30 @@
-let x = 15
+// This drawing machine will pull from an api in which will give the user a random
+// topic to draw. As they draw the brush size will start increasing in which the
+// user will have to finish before the brush size is too big for the canvas.
+let bsize = 5;
 
 function setup() {
   createCanvas(600, 600);
-  background(220);
+  background(255);
 }
 
 function keyTyped() {
-  if (key == ']') {
-    x = x + 15; //if I press ] my brush will go up by 15
-  } else {
-    (key == '[');
-    x = x - 15; //if I press [ my brush will go down by 15
-    // } else if (x < 0) {
-    //   console.log('too small')
-    // }
+  if (key == ']') { //Adust Brush Size
+    bsize = bsize + 5; //if I press ] my brush will go up by 5
+  }
+  if (key == "[") {
+    bsize = bsize - 5; //if I press [ my brush will down up by 5
+  }
+  if (bsize < 5) {    //if I press [ beyond 0 my brush will remain as 5
+    bsize = 5;
+  }
+  if (key == 's') {
+    saveCanvas('file name', 'png');
   }
 }
+
 function draw() {
-  strokeWeight(x); //adjust the strokeweight by pressing right bracket
+  strokeWeight(bsize); //adjust the strokeweight by pressing right bracket
   if (mouseIsPressed) {
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
