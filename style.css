@@ -12,13 +12,11 @@ html {
 canvas {
   display: block;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #222323;
   overflow: hidden;
   margin: auto;
 }
-
-
 
 .topsection{
   margin: 100px auto 0 auto;
@@ -34,6 +32,7 @@ canvas {
   text-align: center;
   font-size: 1em;
   border-radius: 5px;
+
 
 }
 

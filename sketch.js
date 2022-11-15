@@ -4,6 +4,7 @@
 let bsize = 5;
 let savedrawing;
 let newproject;
+let cnv;
 
 function downloadtopc(){
   saveCanvas('file name', 'png');
@@ -13,13 +14,14 @@ function resetthecanvas(){
 }
 
 function setup() {
-  createCanvas(600, 600);
+  cnv = createCanvas(600, 600);
+  cnv.parent("#canvasDiv");
   background(255);
 
   //Save Button
-  savedrawing = createButton("Save");
-  savedrawing.mousePressed(downloadtopc);
-  savedrawing.class("sv_button");
+  // savedrawing = createButton("Save");
+  // savedrawing.mousePressed(downloadtopc);
+  // savedrawing.class("sv_button");
   //New Project Button
   newproject = createButton("New Project");
   newproject.mousePressed(resetthecanvas);
