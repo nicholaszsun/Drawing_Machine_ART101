@@ -2,10 +2,28 @@
 // topic to draw. As they draw the brush size will start increasing in which the
 // user will have to finish before the brush size is too big for the canvas.
 let bsize = 5;
+let savedrawing;
+let newproject;
+
+function downloadtopc(){
+  saveCanvas('file name', 'png');
+}
+function resetthecanvas(){
+  clear();
+}
 
 function setup() {
   createCanvas(600, 600);
   background(255);
+
+  //Save Button
+  savedrawing = createButton("Save");
+  savedrawing.mousePressed(downloadtopc);
+  savedrawing.class("sv_button");
+  //New Project Button
+  newproject = createButton("New Project");
+  newproject.mousePressed(resetthecanvas);
+  newproject.class("np_button");
 }
 
 function keyTyped() {
@@ -17,9 +35,6 @@ function keyTyped() {
   }
   if (bsize < 5) {    //if I press [ beyond 0 my brush will remain as 5
     bsize = 5;
-  }
-  if (key == 's') {
-    saveCanvas('file name', 'png');
   }
 }
 

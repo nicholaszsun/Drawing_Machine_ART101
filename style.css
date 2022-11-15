@@ -1,7 +1,7 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: normal;
-  background-color: #white;
+  background-color: #f0f6f0;
 }
 
 html {
@@ -9,17 +9,40 @@ html {
   padding: 0;
 }
 
-body {
+canvas {
+  display: block;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #222323;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+
+.topsection{
   margin: 100px auto 0 auto;
   width: 80%;
   text-align: center;
 }
 
-canvas {
-  display: block;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #000;
-  overflow: hidden;
-  margin: auto;
+.sv_button{
+  color: #f0f6f0;
+  border: 0;
+  padding: 1em 1.5em;
+  background-color: #222323;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 5px;
+
+}
+
+.np_button{
+  color: #f0f6f0;
+  border: 0;
+  padding: 1em 1.5em;
+  background-color: #222323;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 5px;
 }
