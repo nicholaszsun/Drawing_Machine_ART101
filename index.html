@@ -11,22 +11,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <meta charset="utf-8" />
+  <title>Mouse Drawing Machine</title>
 </head>
 
 <body>
-  <div class="topsection">
-    <h1>Drawing Machine</h1>
-    <p>hit <b>'['</b> to decrease brush size</p>
-    <p>hit <b>']'</b> to increase brush size</p>
-  </div>
-  <div class="" id="canvasDiv">
-
-  </div>
-  <div class="" id="controlsDiv">
-    <button type="button" id="savebutton" class="sv_button">Save</button>
-  </div>
+  <div class="wrapper">
+    <header class="title"><h1 style="font-family:Permanent Marker;">Drawing Machine</h1></header>
+      <div class="row">
+      <div class ="column">
+          <div class="btnpos_1">
+              <button type="button" id ="action_1" class="b1">New Project</button></div>
+          </div>
+      <div class ="column">
+          <div class="btnpos_2">
+              <button type="button" id ="action_2" class="b2">Save Project</button></div>
+     </div>
+      </div>
+      <div class="canvclss1" id ="canvid"></div>
+      <p class= "instr1">Press "]" to increase brush size</p>
+      <p class="instr1">Press "[" to decrease brush size</p>
+ </div>
 </body>
 
 </html.
